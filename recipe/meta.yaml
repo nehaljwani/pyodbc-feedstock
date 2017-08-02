@@ -18,11 +18,14 @@ build:
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
-    - toolchain
     - unixodbc 2.3.4  # [unix]
+
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
 
   run:
     - python
