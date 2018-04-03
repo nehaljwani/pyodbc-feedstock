@@ -1,6 +1,6 @@
 {% set name = "pyodbc" %}
-{% set version = "4.0.17" %}
-{% set sha256 = "a82892ba8d74318524efaaccaf8351d3a3b4079a07e1a758902a2b9e84529c9d" %}
+{% set version = "4.0.23" %}
+{% set sha256 = "bb33d032c1f25781db64e2e4fecf77047fab2ddde42a6cd9496e3c66fb8e9f66" %}
 
 package:
   name: {{ name|lower }}
