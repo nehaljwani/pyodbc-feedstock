@@ -14,8 +14,8 @@ source:
     - setup.patch  # [unix]
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 1
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
@@ -24,12 +24,10 @@ requirements:
 
   host:
     - python
-    - setuptools
-    - unixodbc 2.3.4  # [unix]
-
+    - pip
+    - unixodbc   # [unix]
   run:
     - python
-    - unixodbc 2.3.4  # [unix]
 
 test:
   imports:
