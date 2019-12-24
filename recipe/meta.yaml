@@ -1,6 +1,6 @@
 {% set name = "pyodbc" %}
-{% set version = "4.0.27" %}
-{% set sha256 = "2b5628e1bb56e60f22514b058b591a60b013fcfa5c6d712265608cc0e089a2cd" %}
+{% set version = "4.0.28" %}
+{% set sha256 = "510643354c4c687ed96bf7e7cec4d02d6c626ecf3e18696f5a0228dd6d11b769" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,7 @@ source:
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
