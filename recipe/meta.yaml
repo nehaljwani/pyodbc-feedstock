@@ -1,6 +1,6 @@
 {% set name = "pyodbc" %}
-{% set version = "4.0.28" %}
-{% set sha256 = "510643354c4c687ed96bf7e7cec4d02d6c626ecf3e18696f5a0228dd6d11b769" %}
+{% set version = "4.0.30" %}
+{% set sha256 = "852b5deeeb3366af8b4408efed993501708be45d221881bce60c9aac54be726a" %}
 
 package:
   name: {{ name|lower }}
@@ -38,7 +38,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: 'DB API Module for ODBC'
+  summary: DB API Module for ODBC
   description: |
     pyodbc is a Python DB API 2 module for ODBC. This project provides an
     up-to-date, convenient interface to ODBC using native data types like
