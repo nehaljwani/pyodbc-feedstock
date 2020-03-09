@@ -1,0 +1,31 @@
+From 86f600359b33c4e0583a59b1c701faa2c3cc850b Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sun, 8 Mar 2020 21:09:10 -0400
+Subject: [PATCH] Comment out fix for #663
+
+FH4(-) is a VS2019+ flag, throws C1007 with VS2015
+---
+ setup.py | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+diff --git a/setup.py b/setup.py
+index bc97bec..998a534 100755
+--- a/setup.py
++++ b/setup.py
+@@ -168,9 +168,10 @@ def get_compiler_settings(version_str):
+         # made the settings.
+         # https://lectem.github.io/msvc/reverse-engineering/build/2019/01/21/MSVC-hidden-flags.html
+ 
+-        if sys.hexversion >= 0x03050000:
+-            settings['extra_compile_args'].append('/d2FH4-')
+-            settings['extra_link_args'].append('/d2:-FH4-')
++        # Uncomment below when using VS2019
++        # if sys.hexversion >= 0x03050000:
++            # settings['extra_compile_args'].append('/d2FH4-')
++            # settings['extra_link_args'].append('/d2:-FH4-')
+ 
+         settings['libraries'].append('odbc32')
+         settings['libraries'].append('advapi32')
+-- 
+2.23.0
+
